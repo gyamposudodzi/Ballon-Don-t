@@ -44,7 +44,7 @@ export function NomineeExplorer({ hub, title, nominees }: NomineeExplorerProps) 
                 className="inline-flex items-center gap-3 rounded-full bg-[#1A1A1A] px-5 py-2 text-sm text-[#FCD4A0]"
               >
                 Load more
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F5F1DC] text-lg text-black">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#FCD4A0] text-lg text-black">
                   +
                 </span>
               </button>

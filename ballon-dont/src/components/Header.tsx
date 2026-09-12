@@ -23,7 +23,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-[#F5F1DC]">
+    <header className="sticky top-0 z-50 bg-[#FCD4A0]">
       <div className="relative mx-auto flex max-w-[1280px] items-center justify-between px-4 py-3.5 md:px-6">
         <div className="flex items-center gap-5">
           <button
@@ -72,7 +72,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <nav id="site-menu" className="border-t border-black/10 bg-[#F5F1DC] px-4 py-6" aria-label="Menu">
+        <nav id="site-menu" className="border-t border-black/10 bg-[#FCD4A0] px-4 py-6" aria-label="Menu">
           <div className="mx-auto grid max-w-[1280px] gap-2 sm:grid-cols-2">
             {MENU.map((item) => (
               <Link

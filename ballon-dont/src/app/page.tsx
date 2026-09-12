@@ -71,7 +71,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#F5F1DC] py-10 text-black">
+      <section className="bg-[#FCD4A0] py-10 text-black">
         <div className="mx-auto flex max-w-[1280px] flex-col items-center gap-2 px-4">
           <div className="gold-divider" />
           <h2 className="text-4xl font-normal uppercase tracking-[0.04em] md:text-5xl">Stories of</h2>

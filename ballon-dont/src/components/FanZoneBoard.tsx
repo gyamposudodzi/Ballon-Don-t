@@ -31,7 +31,7 @@ export function FanZoneBoard({ nominees }: FanZoneBoardProps) {
   }).length;
 
   return (
-    <div className="bg-gradient-to-b from-[#F5F1DC] via-[#F5F1DC] to-black">
+    <div className="bg-gradient-to-b from-[#FCD4A0] via-[#FCD4A0] to-black">
       <section className="mx-auto max-w-[1280px] px-4 pb-6 pt-14 text-center md:px-6">
         <h1 className="text-4xl font-medium uppercase tracking-[0.06em] text-black md:text-6xl">Fan Zone</h1>
         <p className="mt-3 text-lg text-black/70">Become the rust expert.</p>

@@ -47,7 +47,7 @@ export function NomineeCard({ nominee }: NomineeCardProps) {
         {nominee.club ? <p className="mt-2 text-xs text-[#877458]">{nominee.club}</p> : null}
       </div>
 
-      <span className="absolute bottom-5 right-5 flex h-9 w-9 items-center justify-center rounded-full bg-[#F5F1DC] text-black transition group-hover:bg-white">
+      <span className="absolute bottom-5 right-5 flex h-9 w-9 items-center justify-center rounded-full bg-[#FCD4A0] text-black transition group-hover:bg-white">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden>
           <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.6" />
         </svg>
