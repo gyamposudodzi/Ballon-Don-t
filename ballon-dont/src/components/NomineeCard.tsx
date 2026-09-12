@@ -1,66 +1,58 @@
 import Link from "next/link";
 import type { Nominee } from "@/data/types";
 import { initials } from "@/lib/content";
-import { TrophyMark } from "@/components/TrophyMark";
+import { MiniBall } from "@/components/MiniBall";
 
 type NomineeCardProps = {
   nominee: Nominee;
 };
 
-function flyerNames(nominee: Nominee) {
+export function NomineeCard({ nominee }: NomineeCardProps) {
   const last = nominee.lastName ?? nominee.name.split(" ").slice(-1)[0];
   const first =
-    nominee.firstName && nominee.firstName.toLowerCase() !== last.toLowerCase()
-      ? nominee.firstName
-      : nominee.name === last
-        ? ""
-        : nominee.name.replace(new RegExp(`\\s*${last}$`, "i"), "");
-  return { first, last };
-}
-
-export function NomineeCard({ nominee }: NomineeCardProps) {
-  const { first, last } = flyerNames(nominee);
+    nominee.firstName && nominee.firstName.toLowerCase() !== last.toLowerCase() ? nominee.firstName : "";
+  const meta = [nominee.age, nominee.nationCode ?? nominee.nation].filter(Boolean).join(" · ");
 
   return (
     <Link
       href={`/nominees/player/${nominee.slug}`}
-      className="group relative block overflow-hidden rounded-sm bg-[#050C13] shadow-[0_12px_40px_rgba(0,0,0,0.45)]"
+      className="group relative block overflow-hidden rounded-2xl bg-[#141414] px-5 pb-8 pt-6"
     >
-      {nominee.image ? (
-        <img
-          src={nominee.image}
-          alt={nominee.name}
-          className="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-[1.02]"
-        />
-      ) : (
-        <div className="flyer-card relative aspect-[4/5] overflow-hidden px-5 pb-5 pt-8">
-          <p className="absolute right-5 top-5 text-[10px] tracking-[0.28em] text-[#FCD4A0]/70">20 26</p>
-          <div className="flex items-start justify-between gap-3">
-            <span className="flex h-[42%] min-h-28 w-[42%] items-center justify-center rounded-full border border-[#FCD4A0]/40 bg-[#223A49] text-2xl text-[#FCD4A0]">
+      {meta ? (
+        <p className="absolute right-5 top-5 text-[11px] uppercase tracking-[0.08em] text-[#FCD4A0]/70">{meta}</p>
+      ) : null}
+
+      <div className="relative mx-auto mt-2 flex h-[168px] w-[168px] items-center justify-center sm:h-[180px] sm:w-[180px]">
+        <span className="block h-full w-full overflow-hidden rounded-full bg-[#223A49]">
+          {nominee.image ? (
+            <img
+              src={nominee.image}
+              alt=""
+              className="h-full w-full object-cover object-[center_12%]"
+            />
+          ) : (
+            <span className="flex h-full w-full items-center justify-center text-3xl text-[#FCD4A0]">
               {initials(nominee.name)}
             </span>
-            <TrophyMark className="mt-10 h-16 w-16 opacity-90" />
-          </div>
-          <div className="absolute right-5 top-[22%] max-w-[46%] text-right text-[10px] uppercase leading-5 tracking-[0.16em] text-[#FCD4A0]/85">
-            {nominee.age ? <p>{nominee.age} y-o {nominee.nationCode ? `(${nominee.nationCode})` : ""}</p> : null}
-            {nominee.position ? <p className="mt-4">{nominee.position}</p> : null}
-            {nominee.club ? <p className="mt-4">{nominee.club}</p> : null}
-            <p className="mt-4">
-              {nominee.nominations ?? 1} nomination
-              {(nominee.nominations ?? 1) === 1 ? "" : "s"}
-            </p>
-          </div>
-          <div className="absolute inset-x-5 bottom-12">
-            {first ? <p className="text-lg leading-none text-[#1a1208]">{first}</p> : null}
-            <p className="mt-1 text-[clamp(1.6rem,5vw,2.4rem)] font-medium uppercase leading-[0.9] tracking-[0.02em] text-[#1a1208]">
-              {last}
-            </p>
-          </div>
-          <p className="absolute inset-x-5 bottom-4 text-[9px] uppercase tracking-[0.22em] text-[#877458]">
-            Ballon D&apos;ont · Nominees
-          </p>
-        </div>
-      )}
+          )}
+        </span>
+        <MiniBall className="absolute -right-1 bottom-3 h-12 w-12 drop-shadow-md sm:h-14 sm:w-14" />
+      </div>
+
+      <div className="mt-6 pr-12">
+        {first ? <p className="text-sm text-[#FCD4A0]/80">{first}</p> : null}
+        <h3 className="text-2xl font-medium uppercase leading-[1.05] tracking-[0.02em] text-[#FCD4A0]">
+          {last}
+        </h3>
+        {nominee.club ? <p className="mt-2 text-xs text-[#877458]">{nominee.club}</p> : null}
+      </div>
+
+      <span className="absolute bottom-5 right-5 flex h-9 w-9 items-center justify-center rounded-full bg-[#F5F1DC] text-black transition group-hover:bg-white">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden>
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.6" />
+        </svg>
+        <span className="sr-only">Open {nominee.name}</span>
+      </span>
     </Link>
   );
 }

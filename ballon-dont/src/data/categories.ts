@@ -14,7 +14,7 @@ export const CATEGORIES: CategoryMeta[] = [
   {
     id: "mens",
     hub: "mens",
-    label: "Men's Nominees",
+    label: "Men's Ballon D'ont",
     shortLabel: "Men",
     countTarget: 22,
     blurb: "Twenty-two names. One rust ball. The main Ballon D'ont shortlist, as filed by Hater Central.",
@@ -52,7 +52,7 @@ export const CATEGORIES: CategoryMeta[] = [
 export const HUBS = [
   {
     slug: "mens",
-    title: "Men's Nominees",
+    title: "Men's Ballon D'ont",
     ids: ["mens"] as AwardCategory[],
     poster: "/flyers/mens-poster.jpg",
   },

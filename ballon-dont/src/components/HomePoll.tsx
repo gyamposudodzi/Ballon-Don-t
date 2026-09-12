@@ -28,7 +28,7 @@ export function HomePoll() {
   const total = counts.ayew + counts.ronaldo;
 
   return (
-    <div className="bg-[#FCD4A0] p-6 text-black">
+    <div className="bg-white p-6 text-black">
       <p className="text-xs font-medium uppercase tracking-[0.16em]">Fan Zone</p>
       <h2 className="mt-3 text-2xl font-medium uppercase leading-tight md:text-3xl">
         Who bottled the bigger night — the defensive forward or the dreamer?

@@ -4,7 +4,7 @@ import { nominees } from "@/data/nominees";
 import { stories } from "@/data/stories";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/nominees", "/stories", "/the-ballon-dont", "/ceremony", "/vote", "/winners"].map(
+  const staticRoutes = ["", "/nominees", "/stories", "/the-ballon-dont", "/ceremony", "/fan-zone", "/vote", "/winners"].map(
     (path) => ({
       url: `https://ballondont.local${path}`,
       lastModified: new Date("2026-09-12"),
