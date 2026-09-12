@@ -14,9 +14,9 @@ export const SITE = {
     city: "London",
   },
   social: {
-    x: "https://x.com/TheHateCentral",
+    x: "https://x.com/TheHateCentral2",
     instagram: "https://www.instagram.com/thehatecentral/",
-    handle: "@TheHateCentral",
+    handle: "@TheHateCentral2",
     name: "Hater Central",
   },
   jury: {

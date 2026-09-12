@@ -2,7 +2,7 @@
 
 The least prestigious award in football. A satirical award site that mirrors the Ballon d'Or information architecture and inverts the tone.
 
-Charge sheets are original copy written in the spirit of [Hater Central](https://x.com/TheHateCentral). No official Ballon d'Or affiliation.
+Charge sheets are original copy written in the spirit of [Hater Central](https://x.com/TheHateCentral2). No official Ballon d'Or affiliation.
 
 ## Run locally
 
