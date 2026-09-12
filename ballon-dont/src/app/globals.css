@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --ink-950: #0c0a09;
+  --ink-900: #1c1410;
+  --ink-800: #2a1d16;
+  --cream: #f4efe6;
+  --cream-dim: #c9c0b2;
+  --rust: #c2410c;
+  --rust-hot: #e05a1a;
+  --bronze: #8a6a3a;
+  --bronze-light: #c4a46a;
+  --line: rgba(196, 164, 106, 0.22);
+}
+
+@theme inline {
+  --color-ink-950: var(--ink-950);
+  --color-ink-900: var(--ink-900);
+  --color-ink-800: var(--ink-800);
+  --color-cream: var(--cream);
+  --color-cream-dim: var(--cream-dim);
+  --color-rust: var(--rust);
+  --color-rust-hot: var(--rust-hot);
+  --color-bronze: var(--bronze);
+  --color-bronze-light: var(--bronze-light);
+  --color-line: var(--line);
+  --color-background: var(--ink-950);
+  --color-foreground: var(--cream);
+  --font-sans: var(--font-outfit);
+  --font-serif: var(--font-playfair);
+}
+
+html {
+  background: var(--ink-950);
+  color: var(--cream);
+}
+
+body {
+  min-height: 100%;
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(194, 65, 12, 0.16), transparent 55%),
+    radial-gradient(900px 500px at 0% 20%, rgba(138, 106, 58, 0.12), transparent 50%),
+    var(--ink-950);
+  color: var(--cream);
+}
+
+::selection {
+  background: rgba(194, 65, 12, 0.45);
+  color: var(--cream);
+}
+
+a {
+  text-underline-offset: 0.18em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--bronze-light);
+  outline-offset: 3px;
+}
+
+.grain {
+  position: relative;
+}
+
+.grain::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
