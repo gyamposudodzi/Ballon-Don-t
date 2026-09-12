@@ -1,9 +1,9 @@
 export const SITE = {
-  name: "Ballon Don't",
-  shortName: "Don't",
+  name: "Ballon D'ont",
+  shortName: "D'ont",
   tagline: "The least prestigious award in football",
   description:
-    "Ballon Don't is the anti-Ballon d'Or: a satirical shortlist for stinkers, bottled nights, and premium invisibility, compiled in the spirit of Hater Central.",
+    "Ballon D'ont is the anti-Ballon d'Or: a satirical shortlist for stinkers, bottled nights, and premium invisibility, compiled from Hater Central's 2026 flyers.",
   year: 2026,
   edition: 1,
   ceremony: {
@@ -21,7 +21,8 @@ export const SITE = {
   },
   jury: {
     size: 100,
-    method: "One hater per eligible nation. Rank a top 10. Fifteen points for the worst night, one point for a mild disappearance.",
+    method:
+      "One hater per eligible nation. Rank a top 10. Fifteen points for the worst night, one point for a mild disappearance.",
   },
 } as const;
 
@@ -29,6 +30,6 @@ export const NAV = [
   { href: "/", label: "Home" },
   { href: "/nominees", label: "Nominees" },
   { href: "/stories", label: "Stories" },
-  { href: "/the-ballon-dont", label: "The Ballon Don't" },
+  { href: "/the-ballon-dont", label: "The Ballon D'ont" },
   { href: "/ceremony", label: "Ceremony" },
 ] as const;

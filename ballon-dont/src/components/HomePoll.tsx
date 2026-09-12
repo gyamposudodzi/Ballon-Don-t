@@ -3,19 +3,19 @@
 import { useEffect, useState } from "react";
 
 const OPTIONS = [
-  { id: "kane", label: "Harry Kane" },
-  { id: "bellingham", label: "Jude Bellingham" },
+  { id: "ayew", label: "Jordan Ayew" },
+  { id: "ronaldo", label: "Cristiano Ronaldo" },
 ] as const;
 
-const STORAGE_KEY = "ballon-dont-home-poll";
+const STORAGE_KEY = "ballon-dont-home-poll-v2";
 
 export function HomePoll() {
   const [choice, setChoice] = useState<string | null>(null);
-  const [counts, setCounts] = useState<Record<string, number>>({ kane: 12, bellingham: 9 });
+  const [counts, setCounts] = useState<Record<string, number>>({ ayew: 14, ronaldo: 11 });
 
   useEffect(() => {
     const saved = window.localStorage.getItem(STORAGE_KEY);
-    if (saved === "kane" || saved === "bellingham") setChoice(saved);
+    if (saved === "ayew" || saved === "ronaldo") setChoice(saved);
   }, []);
 
   function vote(id: string) {
@@ -25,13 +25,13 @@ export function HomePoll() {
     window.localStorage.setItem(STORAGE_KEY, id);
   }
 
-  const total = counts.kane + counts.bellingham;
+  const total = counts.ayew + counts.ronaldo;
 
   return (
     <div className="bg-[#FCD4A0] p-6 text-black">
       <p className="text-xs font-medium uppercase tracking-[0.16em]">Fan Zone</p>
       <h2 className="mt-3 text-2xl font-medium uppercase leading-tight md:text-3xl">
-        You have a free kick 25 meters out — who bottled the bigger night?
+        Who bottled the bigger night — the defensive forward or the dreamer?
       </h2>
       <div className="mt-6 space-y-3">
         {OPTIONS.map((option) => {

@@ -5,7 +5,7 @@ import { formatDate } from "@/lib/content";
 
 export const metadata = {
   title: "Stories",
-  description: "Latest stories and charge sheets from the Ballon Don't desk.",
+  description: "Latest stories and charge sheets from the Ballon D'ont desk.",
 };
 
 export default function StoriesPage() {

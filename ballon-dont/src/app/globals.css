@@ -104,3 +104,9 @@ a {
   text-transform: uppercase;
   color: #fcd4a0;
 }
+
+.flyer-card {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(252, 212, 160, 0.16), transparent 28%),
+    linear-gradient(180deg, #050c13 0%, #223a49 38%, #f5f1dc 72%, #fff8e8 100%);
+}

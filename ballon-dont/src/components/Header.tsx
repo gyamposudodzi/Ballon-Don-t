@@ -9,7 +9,7 @@ const PRIMARY = [
   { href: "/stories", label: "Stories" },
   { href: "/nominees", label: "Nominees" },
   { href: "/winners", label: "Winners" },
-  { href: "/the-ballon-dont", label: "The Ballon Don't" },
+  { href: "/the-ballon-dont", label: "The Ballon D'ont" },
   { href: "/ceremony", label: "Ceremony" },
 ] as const;
 
@@ -61,7 +61,7 @@ export function Header() {
                 <path d="M4 5h16M4 12h16M4 19h16" />
               </svg>
             </button>
-            <Link href="/" onClick={() => setOpen(false)} aria-label="Ballon Don't">
+            <Link href="/" onClick={() => setOpen(false)} aria-label="Ballon D'ont">
               <BrandMark compact />
             </Link>
             <nav className="hidden items-center gap-6 xl:flex" aria-label="Primary">

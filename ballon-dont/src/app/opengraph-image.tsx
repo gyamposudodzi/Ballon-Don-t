@@ -20,7 +20,7 @@ export default function OpenGraphImage() {
       >
         <div style={{ fontSize: 24, letterSpacing: 10, textTransform: "uppercase" }}>2026</div>
         <div style={{ fontSize: 84, marginTop: 16, letterSpacing: 6, textTransform: "uppercase" }}>
-          Ballon Don&apos;t
+          Ballon D&apos;ont
         </div>
         <div style={{ fontSize: 28, marginTop: 24, color: "#F5F1DC" }}>
           The least prestigious award in football

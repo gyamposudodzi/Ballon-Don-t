@@ -1,16 +1,4 @@
-export type AwardCategory =
-  | "mens"
-  | "womens"
-  | "young-talent-mens"
-  | "young-talent-womens"
-  | "goalkeeper-mens"
-  | "goalkeeper-womens"
-  | "coach-mens"
-  | "coach-womens"
-  | "club-mens"
-  | "club-womens"
-  | "striker-mens"
-  | "striker-womens";
+export type AwardCategory = "mens" | "yashit" | "coach" | "club";
 
 export type NomineeKind = "player" | "coach" | "club";
 
@@ -22,10 +10,16 @@ export type ShameStat = {
 export type Nominee = {
   slug: string;
   name: string;
+  firstName?: string;
+  lastName?: string;
   kind: NomineeKind;
   club?: string;
   nation: string;
+  nationCode?: string;
   position?: string;
+  age?: string;
+  nominations?: number;
+  image?: string;
   categories: AwardCategory[];
   charge: string;
   roast: string;

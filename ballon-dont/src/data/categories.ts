@@ -2,147 +2,77 @@ import type { AwardCategory } from "./types";
 
 export type CategoryMeta = {
   id: AwardCategory;
-  hub: "mens" | "womens" | "young-talent" | "goalkeeper" | "coach" | "club" | "striker";
+  hub: AwardCategory;
   label: string;
   shortLabel: string;
   countTarget: number;
   blurb: string;
+  poster: string;
 };
 
 export const CATEGORIES: CategoryMeta[] = [
   {
     id: "mens",
     hub: "mens",
-    label: "Men's Ballon Don't",
+    label: "Men's Nominees",
     shortLabel: "Men",
-    countTarget: 30,
-    blurb: "Thirty names. Zero aura. The main prize for the season's loudest disappearances.",
+    countTarget: 22,
+    blurb: "Twenty-two names. One rust ball. The main Ballon D'ont shortlist, as filed by Hater Central.",
+    poster: "/flyers/mens-poster.jpg",
   },
   {
-    id: "womens",
-    hub: "womens",
-    label: "Women's Ballon Don't",
-    shortLabel: "Women",
-    countTarget: 30,
-    blurb: "The other main prize. Same jury. Same charge sheet. Different fixture list.",
-  },
-  {
-    id: "young-talent-mens",
-    hub: "young-talent",
-    label: "Men's Young Don't",
-    shortLabel: "Young Men",
+    id: "yashit",
+    hub: "yashit",
+    label: "Yashit Trophy",
+    shortLabel: "Yashit",
     countTarget: 10,
-    blurb: "Under 21 and already collecting excuses.",
+    blurb: "The gloves category, renamed. Ten keepers. Two posters. No clean sheet is safe.",
+    poster: "/flyers/yashit-1.jpg",
   },
   {
-    id: "young-talent-womens",
-    hub: "young-talent",
-    label: "Women's Young Don't",
-    shortLabel: "Young Women",
-    countTarget: 5,
-    blurb: "The future, briefly delayed.",
-  },
-  {
-    id: "goalkeeper-mens",
-    hub: "goalkeeper",
-    label: "Men's Howler of the Year",
-    shortLabel: "Men's GK",
-    countTarget: 10,
-    blurb: "For the gloves that turned a cross into folklore.",
-  },
-  {
-    id: "goalkeeper-womens",
-    hub: "goalkeeper",
-    label: "Women's Howler of the Year",
-    shortLabel: "Women's GK",
-    countTarget: 5,
-    blurb: "Same posts. Same panic. Different league table.",
-  },
-  {
-    id: "coach-mens",
+    id: "coach",
     hub: "coach",
-    label: "Men's Masterclass",
-    shortLabel: "Men's Coach",
-    countTarget: 5,
-    blurb: "Score. Sub the scorer. Park the bus. Concede. Press conference.",
+    label: "Coach of the Year",
+    shortLabel: "Coach",
+    countTarget: 6,
+    blurb: "Six benches. One masterclass each. The sideline charge sheet.",
+    poster: "/flyers/coaches-poster.jpg",
   },
   {
-    id: "coach-womens",
-    hub: "coach",
-    label: "Women's Masterclass",
-    shortLabel: "Women's Coach",
-    countTarget: 5,
-    blurb: "Tactical courage, punished in public.",
-  },
-  {
-    id: "club-mens",
+    id: "club",
     hub: "club",
-    label: "Men's Club of the Year",
-    shortLabel: "Men's Club",
+    label: "Club Struck No Fear",
+    shortLabel: "Club",
     countTarget: 5,
-    blurb: "Collective bottling. Shared accountability. No refunds.",
-  },
-  {
-    id: "club-womens",
-    hub: "club",
-    label: "Women's Club of the Year",
-    shortLabel: "Women's Club",
-    countTarget: 5,
-    blurb: "The dressing room that could not close.",
-  },
-  {
-    id: "striker-mens",
-    hub: "striker",
-    label: "Men's Open Goal",
-    shortLabel: "Men's Striker",
-    countTarget: 10,
-    blurb: "For the finishers who finished nothing.",
-  },
-  {
-    id: "striker-womens",
-    hub: "striker",
-    label: "Women's Open Goal",
-    shortLabel: "Women's Striker",
-    countTarget: 5,
-    blurb: "The six-yard box remains undefeated.",
+    blurb: "Hater Central's club prize. Collective bottling. Shared accountability. No refunds.",
+    poster: "/flyers/clubs-poster.jpg",
   },
 ];
 
 export const HUBS = [
   {
     slug: "mens",
-    title: "Men's Ballon Don't",
+    title: "Men's Nominees",
     ids: ["mens"] as AwardCategory[],
+    poster: "/flyers/mens-poster.jpg",
   },
   {
-    slug: "womens",
-    title: "Women's Ballon Don't",
-    ids: ["womens"] as AwardCategory[],
-  },
-  {
-    slug: "young-talent",
-    title: "Young Don't of the Year",
-    ids: ["young-talent-mens", "young-talent-womens"] as AwardCategory[],
-  },
-  {
-    slug: "goalkeeper",
-    title: "Howler of the Year",
-    ids: ["goalkeeper-mens", "goalkeeper-womens"] as AwardCategory[],
+    slug: "yashit",
+    title: "Yashit Trophy",
+    ids: ["yashit"] as AwardCategory[],
+    poster: "/flyers/yashit-1.jpg",
   },
   {
     slug: "coach",
-    title: "Masterclass of the Year",
-    ids: ["coach-mens", "coach-womens"] as AwardCategory[],
+    title: "Coach of the Year",
+    ids: ["coach"] as AwardCategory[],
+    poster: "/flyers/coaches-poster.jpg",
   },
   {
     slug: "club",
-    title: "Club of the Year",
-    ids: ["club-mens", "club-womens"] as AwardCategory[],
-  },
-  {
-    slug: "striker",
-    title: "Open Goal of the Year",
-    ids: ["striker-mens", "striker-womens"] as AwardCategory[],
+    title: "Club Struck No Fear",
+    ids: ["club"] as AwardCategory[],
+    poster: "/flyers/clubs-title.jpg",
   },
 ] as const;
 

@@ -5,7 +5,7 @@ type TrophyMarkProps = {
 
 export function TrophyMark({
   className = "h-40 w-40",
-  title = "Ballon Don't trophy",
+  title = "Ballon D'ont trophy",
 }: TrophyMarkProps) {
   return (
     <svg viewBox="0 0 200 220" role="img" aria-label={title} className={className}>

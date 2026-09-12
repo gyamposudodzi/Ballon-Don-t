@@ -6,7 +6,7 @@ const LINKS = [
   { href: "/nominees", label: "Nominees" },
   { href: "/stories", label: "Stories" },
   { href: "/winners", label: "Winners" },
-  { href: "/the-ballon-dont", label: "The Ballon Don't" },
+  { href: "/the-ballon-dont", label: "The Ballon D'ont" },
   { href: "/ceremony", label: "Ceremony" },
   { href: "/vote", label: "Fan Zone" },
 ];

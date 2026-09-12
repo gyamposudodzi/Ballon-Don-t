@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
-  keywords: ["Ballon Don't", "football award", "Hater Central", "nominees"],
+  keywords: ["Ballon D'ont", "football award", "Hater Central", "nominees"],
   openGraph: {
     title: `${SITE.name} | ${SITE.tagline}`,
     description: SITE.description,

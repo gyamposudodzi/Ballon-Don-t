@@ -35,8 +35,8 @@ export default function CeremonyPage() {
           </dl>
           <p className="mt-8 text-base leading-8 text-cream-dim">
             There is no fake livestream. If you want gold, watch the other ceremony. Then come back here for
-            the minutes that matter: the charge sheets, the vote, the stories. What gets announced: the main
-            Don&apos;ts, Young Don&apos;t, Howler, Masterclass, Club, and Open Goal.
+            the minutes that matter: the charge sheets, the vote, the stories. What gets announced: the Men&apos;s
+            Nominees, the Yashit Trophy, Coach of the Year, and Club Struck No Fear.
           </p>
           <Link
             href="/vote"

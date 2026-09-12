@@ -22,7 +22,7 @@ export function BrandMark({ className = "", compact = false, invert = false }: B
           compact ? "text-[15px]" : "text-[18px]"
         }`}
       >
-        Ballon Don&apos;t
+        Ballon D&apos;ont
       </span>
     </span>
   );
