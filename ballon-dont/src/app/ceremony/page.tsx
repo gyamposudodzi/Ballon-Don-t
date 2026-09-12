@@ -14,10 +14,10 @@ export default function CeremonyPage() {
     <>
       <PageHero
         kicker="26 October 2026"
-        title="The Complaint Palladium, London"
+        title="London 2026"
         dek="A very serious room for a very unserious trophy. The Hater jury's tallies close at 8:00 p.m."
       />
-      <section className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-2">
+      <section className="mx-auto grid max-w-[1200px] items-center gap-10 px-4 pb-20 lg:grid-cols-2">
         <div>
           <dl className="space-y-5">
             <div>
@@ -40,12 +40,12 @@ export default function CeremonyPage() {
           </p>
           <Link
             href="/vote"
-            className="mt-8 inline-flex rounded-full bg-rust px-5 py-3 text-xs tracking-[0.18em] uppercase hover:bg-rust-hot"
+            className="mt-8 inline-flex bg-[#FCD4A0] px-5 py-3 text-xs font-medium uppercase tracking-[0.16em] text-black"
           >
             File your ballot
           </Link>
         </div>
-        <div className="flex flex-col items-center gap-6 border border-line bg-ink-900/40 p-8">
+        <div className="gold-frame flex flex-col items-center gap-6 bg-[#050C13] p-8">
           <TrophyMark className="h-44 w-44" />
           <div className="w-full">
             <p className="mb-3 text-center text-[10px] tracking-[0.24em] uppercase text-bronze-light">

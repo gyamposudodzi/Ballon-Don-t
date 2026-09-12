@@ -37,7 +37,7 @@ export default async function CategoryPage({ params }: PageProps) {
         title={hub.title}
         dek={lead?.blurb ?? "The Hater jury has filed these names."}
       />
-      <section className="mx-auto max-w-6xl space-y-14 px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-[1200px] space-y-14 px-4 pb-20">
         {groups.map((group) => {
           const meta = getCategoryMeta(group.id);
           return (
@@ -47,7 +47,7 @@ export default async function CategoryPage({ params }: PageProps) {
                   <p className="text-xs tracking-[0.2em] uppercase text-bronze-light">
                     {group.nominees.length} names
                   </p>
-                  <h2 className="mt-2 font-serif text-3xl">{meta?.label}</h2>
+                  <h2 className="section-title mt-2">{meta?.label}</h2>
                 </div>
               ) : null}
               <NomineeGrid nominees={group.nominees} />

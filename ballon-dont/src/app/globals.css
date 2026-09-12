@@ -1,16 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  --ink-950: #0c0a09;
-  --ink-900: #1c1410;
-  --ink-800: #2a1d16;
-  --cream: #f4efe6;
-  --cream-dim: #c9c0b2;
-  --rust: #c2410c;
-  --rust-hot: #e05a1a;
-  --bronze: #8a6a3a;
-  --bronze-light: #c4a46a;
-  --line: rgba(196, 164, 106, 0.22);
+  --clr-black: #000;
+  --clr-white: #fff;
+  --clr-navy: #050c13;
+  --clr-teal: #223a49;
+  --clr-silver: #e6e6e6;
+  --clr-gold: #fcd4a0;
+  --clr-gold-bright: #ffd100;
+  --clr-gold-muted: #877458;
+  --clr-cream: #f5f1dc;
+  --clr-cream-soft: #f0e2b1;
+  --ink-950: #000000;
+  --ink-900: #050c13;
+  --ink-800: #223a49;
+  --cream: #fcd4a0;
+  --cream-dim: #f5f1dc;
+  --rust: #fcd4a0;
+  --rust-hot: #ffd100;
+  --bronze: #877458;
+  --bronze-light: #fcd4a0;
+  --line: rgba(252, 212, 160, 0.35);
 }
 
 @theme inline {
@@ -24,29 +34,33 @@
   --color-bronze: var(--bronze);
   --color-bronze-light: var(--bronze-light);
   --color-line: var(--line);
-  --color-background: var(--ink-950);
-  --color-foreground: var(--cream);
-  --font-sans: var(--font-outfit);
-  --font-serif: var(--font-playfair);
+  --color-gold: var(--clr-gold);
+  --color-gold-bright: var(--clr-gold-bright);
+  --color-gold-muted: var(--clr-gold-muted);
+  --color-navy: var(--clr-navy);
+  --color-teal: var(--clr-teal);
+  --color-silver: var(--clr-silver);
+  --color-background: var(--clr-black);
+  --color-foreground: var(--clr-gold);
+  --font-sans: var(--font-cera);
+  --font-serif: var(--font-cera);
 }
 
 html {
-  background: var(--ink-950);
-  color: var(--cream);
+  background: #000;
+  color: #fcd4a0;
 }
 
 body {
   min-height: 100%;
-  background:
-    radial-gradient(1200px 600px at 80% -10%, rgba(194, 65, 12, 0.16), transparent 55%),
-    radial-gradient(900px 500px at 0% 20%, rgba(138, 106, 58, 0.12), transparent 50%),
-    var(--ink-950);
-  color: var(--cream);
+  background: #000;
+  color: #fcd4a0;
+  font-family: var(--font-cera), Inter, sans-serif;
 }
 
 ::selection {
-  background: rgba(194, 65, 12, 0.45);
-  color: var(--cream);
+  background: rgba(252, 212, 160, 0.35);
+  color: #000;
 }
 
 a {
@@ -54,19 +68,39 @@ a {
 }
 
 :focus-visible {
-  outline: 2px solid var(--bronze-light);
+  outline: 2px solid #fcd4a0;
   outline-offset: 3px;
 }
 
-.grain {
-  position: relative;
+.header-gradient {
+  background: linear-gradient(90deg, #050c13 1.44%, #223a49 61.06%, #e6e6e6 81.73%, #e6e6e6 86.06%);
 }
 
-.grain::before {
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  opacity: 0.08;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+.gold-frame {
+  border: 3px solid #fcd4a0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.story-overlay {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 19.71%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+.exclusive-badge {
+  background: linear-gradient(90deg, #fcd4a0 0.48%, #877458 100%);
+}
+
+.gold-divider {
+  width: 160px;
+  border-top: 1px solid #877458;
+}
+
+.section-title {
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fcd4a0;
 }

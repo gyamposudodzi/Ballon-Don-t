@@ -13,13 +13,13 @@ export default function WinnersPage() {
     <>
       <PageHero
         kicker="Winners archive"
-        title="The rust ball, and the years before it existed"
+        title="See the winners"
         dek="2026 is the first official night. Earlier names are honorary exhibits from the Hater Central era."
       />
-      <section className="mx-auto max-w-6xl space-y-12 px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-[1200px] space-y-12 px-4 pb-20">
         {years.map((year) => (
           <div key={year}>
-            <h2 className="font-serif text-3xl text-bronze-light">{year}</h2>
+            <h2 className="section-title">{year}</h2>
             <div className="mt-5 grid gap-4 md:grid-cols-2">
               {pastWinners
                 .filter((winner) => winner.year === year)

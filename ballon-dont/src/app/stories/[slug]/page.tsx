@@ -33,7 +33,7 @@ export default async function StoryArticlePage({ params }: PageProps) {
           <p className="text-xs tracking-[0.2em] uppercase text-bronze-light">
             {story.categoryLabel} · {formatDate(story.date)}
           </p>
-          <h1 className="mt-4 font-serif text-4xl leading-tight sm:text-6xl">{story.title}</h1>
+          <h1 className="mt-4 text-4xl font-medium uppercase leading-tight tracking-[0.03em] sm:text-6xl">{story.title}</h1>
           <p className="mt-5 text-lg text-cream-dim">{story.dek}</p>
           <p className="mt-6 text-sm text-cream-dim">{story.author}</p>
         </div>

@@ -14,10 +14,10 @@ export default function NomineesPage() {
     <>
       <PageHero
         kicker={`${SITE.year} shortlists`}
-        title="All the nominees of the Ballon Don't"
-        dek="The recap of all recaps. Who bottled it. Who vanished. Who should take home the rust."
+        title="All the nominees of the 2026 Ballon Don't"
+        dek="Discover the complete list of nominees in one place. The countdown to the winners begins now."
       />
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-[1200px] px-4 pb-20">
         <div className="grid gap-4 md:grid-cols-2">
           {HUBS.map((hub) => {
             const cats = CATEGORIES.filter((category) => hub.ids.includes(category.id));
@@ -26,13 +26,11 @@ export default function NomineesPage() {
               <Link
                 key={hub.slug}
                 href={`/nominees/${hub.slug}`}
-                className="border border-line bg-ink-900/40 p-6 transition hover:border-bronze/60"
+                className="gold-frame bg-[#050C13] p-6 hover:bg-[#223A49]"
               >
-                <p className="text-[10px] tracking-[0.2em] uppercase text-bronze-light">
-                  {total} on the sheet
-                </p>
-                <h2 className="mt-2 font-serif text-3xl">{hub.title}</h2>
-                <ul className="mt-4 space-y-1 text-sm text-cream-dim">
+                <p className="text-[11px] uppercase tracking-[0.16em] text-[#877458]">{total} nominees</p>
+                <h2 className="mt-2 text-3xl text-[#FCD4A0]">{hub.title}</h2>
+                <ul className="mt-4 space-y-1 text-sm text-[#F5F1DC]">
                   {cats.map((category) => (
                     <li key={category.id}>
                       {category.label} · {categoryCount(category.id)}

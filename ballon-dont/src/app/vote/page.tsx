@@ -13,11 +13,11 @@ export default function VotePage() {
   return (
     <>
       <PageHero
-        kicker="Hater jury"
-        title="Rank the men's Don't"
+        kicker="Fan Zone"
+        title="Vote now"
         dek="Same shape as the gold vote, inverted criteria. Fifteen points for the worst night. Stored on this device only."
       />
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-[1200px] px-4 pb-20">
         <VoteWidget nominees={nominees} />
       </section>
     </>

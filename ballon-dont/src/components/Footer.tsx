@@ -1,55 +1,45 @@
 import Link from "next/link";
-import { NAV, SITE } from "@/data/site";
+import { BrandMark } from "@/components/BrandMark";
+import { SITE } from "@/data/site";
+
+const LINKS = [
+  { href: "/nominees", label: "Nominees" },
+  { href: "/stories", label: "Stories" },
+  { href: "/winners", label: "Winners" },
+  { href: "/the-ballon-dont", label: "The Ballon Don't" },
+  { href: "/ceremony", label: "Ceremony" },
+  { href: "/vote", label: "Fan Zone" },
+];
 
 export function Footer() {
   return (
-    <footer className="mt-auto border-t border-line bg-ink-900">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
+    <footer className="mt-auto bg-black" aria-label="Footer">
+      <div className="h-px bg-[#877458]" />
+      <div className="mx-auto flex max-w-[1200px] flex-col gap-10 px-4 py-14 md:flex-row md:items-start md:justify-between">
         <div>
-          <p className="font-serif text-2xl">
-            Ballon <span className="italic text-rust-hot">Don&apos;t</span>
-          </p>
-          <p className="mt-3 max-w-xs text-sm leading-6 text-cream-dim">
-            {SITE.tagline}. Compiled in the spirit of {SITE.social.name}.
+          <BrandMark />
+          <p className="mt-4 max-w-xs text-sm leading-6 text-[#F5F1DC]">
+            The official home of the least prestigious award in football.
           </p>
         </div>
-        <div>
-          <p className="text-xs tracking-[0.2em] uppercase text-bronze-light">Explore</p>
-          <div className="mt-4 flex flex-col gap-2">
-            {NAV.map((item) => (
-              <Link key={item.href} href={item.href} className="text-sm text-cream-dim hover:text-cream">
-                {item.label}
-              </Link>
-            ))}
-            <Link href="/winners" className="text-sm text-cream-dim hover:text-cream">
-              Archive
+        <div className="grid grid-cols-2 gap-x-12 gap-y-2 text-[15px] text-[#FCD4A0]">
+          {LINKS.map((item) => (
+            <Link key={item.href} href={item.href} className="py-1 hover:text-white">
+              {item.label}
             </Link>
-            <Link href="/vote" className="text-sm text-cream-dim hover:text-cream">
-              Hater vote
-            </Link>
-          </div>
+          ))}
         </div>
-        <div>
-          <p className="text-xs tracking-[0.2em] uppercase text-bronze-light">The jury&apos;s feed</p>
-          <div className="mt-4 flex flex-col gap-2 text-sm">
-            <a href={SITE.social.x} className="text-cream-dim hover:text-cream" target="_blank" rel="noreferrer">
-              X {SITE.social.handle}
-            </a>
-            <a
-              href={SITE.social.instagram}
-              className="text-cream-dim hover:text-cream"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Instagram {SITE.social.handle}
-            </a>
-          </div>
+        <div className="flex gap-5 text-sm text-[#FCD4A0]">
+          <a href={SITE.social.x} target="_blank" rel="noreferrer" className="hover:text-white">
+            X
+          </a>
+          <a href={SITE.social.instagram} target="_blank" rel="noreferrer" className="hover:text-white">
+            Instagram
+          </a>
         </div>
       </div>
-      <div className="border-t border-line">
-        <p className="mx-auto max-w-6xl px-4 py-5 text-xs text-cream-dim sm:px-6">
-          Satire. Original copy. No official Ballon d&apos;Or affiliation. Just jokes, no bias.
-        </p>
+      <div className="bg-[#050C13] py-4 text-center text-xs text-[#877458]">
+        Satire. Original copy. No official Ballon d&apos;Or affiliation.
       </div>
     </footer>
   );

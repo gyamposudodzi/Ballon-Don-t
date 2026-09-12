@@ -11,64 +11,57 @@ export default function AboutPage() {
     <>
       <PageHero
         kicker="History & legacy"
-        title="The least prestigious award in football"
-        dek="A rust ball for the year you would rather forget. Built as the opposite of the gold night."
+        title="History"
+        dek="For one public edition so far, Ballon Don't has stood as the least prestigious individual accolade in football. It honours the nights players would rather delete."
       />
-      <section className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-3">
-        <div className="border border-line p-6">
-          <p className="font-serif text-4xl text-bronze-light">2026</p>
-          <p className="mt-2 text-sm text-cream-dim">First public edition</p>
-        </div>
-        <div className="border border-line p-6">
-          <p className="font-serif text-4xl text-bronze-light">{SITE.jury.size}</p>
-          <p className="mt-2 text-sm text-cream-dim">International haters</p>
-        </div>
-        <div className="border border-line p-6">
-          <p className="font-serif text-4xl text-bronze-light">10</p>
-          <p className="mt-2 text-sm text-cream-dim">Names ranked per ballot</p>
+      <section className="mx-auto grid max-w-[1200px] gap-6 px-4 pb-16 md:grid-cols-3">
+        {[
+          ["2026", "First edition"],
+          ["1", "Ceremony held"],
+          [String(SITE.jury.size), "International haters"],
+        ].map(([value, label]) => (
+          <div key={label} className="border border-[#FCD4A0] p-8 text-center">
+            <p className="text-5xl text-[#FCD4A0]">{value}</p>
+            <p className="mt-3 text-sm uppercase tracking-[0.16em] text-[#F5F1DC]">{label}</p>
+          </div>
+        ))}
+      </section>
+      <section className="mx-auto max-w-[800px] px-4 pb-16">
+        <h2 className="section-title">Award rules</h2>
+        <p className="mt-6 text-base leading-8 text-[#F5F1DC]">{SITE.jury.method}</p>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {[
+            ["30", "Men nominees"],
+            ["30", "Women nominees"],
+            ["10", "Top players ranked"],
+          ].map(([value, label]) => (
+            <div key={label} className="text-center">
+              <p className="text-4xl text-[#FCD4A0]">{value}</p>
+              <p className="mt-2 text-sm uppercase tracking-[0.14em] text-[#F5F1DC]">{label}</p>
+            </div>
+          ))}
         </div>
       </section>
-      <section className="mx-auto max-w-3xl space-y-12 px-4 pb-16 sm:px-6">
-        <div>
-          <h2 className="font-serif text-3xl">History</h2>
-          <p className="mt-4 text-base leading-8 text-cream-dim">
-            For nearly seven decades the other award has stood as football&apos;s most serious individual night.
-            Ballon Don&apos;t is the afterparty that tells the truth: the stinker, the bottled header, the
-            90-minute disappearing act. The charge sheets were already being written in public by{" "}
-            {SITE.social.name}. This site is the museum.
-          </p>
-        </div>
-        <div>
-          <h2 className="font-serif text-3xl">Award rules</h2>
-          <p className="mt-4 text-base leading-8 text-cream-dim">{SITE.jury.method}</p>
-          <p className="mt-4 text-base leading-8 text-cream-dim">
-            Thirty men. Thirty women. Supporting lists for young talent, gloves, benches, clubs, and strikers.
-            Only the year under review counts. Legacy is aggravation, not mitigation.
-          </p>
-        </div>
-        <div>
-          <h2 className="font-serif text-3xl">Criteria</h2>
-          <ol className="mt-6 space-y-5">
-            <li className="border border-line p-5">
-              <p className="text-xs tracking-[0.2em] uppercase text-bronze-light">01 · Individual stinker</p>
-              <p className="mt-2 text-cream-dim">
-                The night they were supposed to show up and filed a missing-person report instead.
+      <section className="mx-auto max-w-[800px] px-4 pb-20">
+        <h2 className="section-title">Criteria</h2>
+        <p className="mt-6 text-base leading-8 text-[#F5F1DC]">
+          Ballon Don&apos;t is awarded on three pillars, in order of importance: individual stinker, team collapse,
+          and no class / no fair play.
+        </p>
+        <ol className="mt-8 space-y-4">
+          {[
+            ["01", "Individual stinker", "The night they were supposed to show up."],
+            ["02", "Team collapse", "The sub that removed the scorer. The header still conceded."],
+            ["03", "No class / no fair play", "Theatrics, excuses, blue filters, press-conference poetry."],
+          ].map(([n, title, body]) => (
+            <li key={n} className="border border-[#FCD4A0] p-5">
+              <p className="text-xs uppercase tracking-[0.16em] text-[#877458]">
+                {n} · {title}
               </p>
+              <p className="mt-2 text-[#F5F1DC]">{body}</p>
             </li>
-            <li className="border border-line p-5">
-              <p className="text-xs tracking-[0.2em] uppercase text-bronze-light">02 · Team collapse</p>
-              <p className="mt-2 text-cream-dim">
-                Shared accountability. The sub that removed the scorer. The high line that became folklore.
-              </p>
-            </li>
-            <li className="border border-line p-5">
-              <p className="text-xs tracking-[0.2em] uppercase text-bronze-light">03 · No class / no fair play</p>
-              <p className="mt-2 text-cream-dim">
-                The opposite of the gold night&apos;s third pillar. Theatrics, excuses, blue filters, and press-conference poetry.
-              </p>
-            </li>
-          </ol>
-        </div>
+          ))}
+        </ol>
       </section>
     </>
   );

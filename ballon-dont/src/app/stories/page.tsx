@@ -15,10 +15,10 @@ export default function StoriesPage() {
     <>
       <PageHero
         kicker="The latest"
-        title="Stories & highlights"
+        title="Latest Stories & Highlights"
         dek="Unveiling notes, jury rules, category deep dives, and the London countdown."
       />
-      <section className="mx-auto max-w-6xl space-y-6 px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-[1200px] space-y-6 px-4 pb-20">
         {featured ? <StoryCard story={featured} featured /> : null}
         <div className="grid gap-4 md:grid-cols-2">
           {rest.map((story) => (

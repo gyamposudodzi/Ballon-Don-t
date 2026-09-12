@@ -14,17 +14,15 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: 80,
-          background: "#0c0a09",
-          color: "#f4efe6",
+          background: "linear-gradient(90deg, #050C13 0%, #223A49 60%, #877458 100%)",
+          color: "#FCD4A0",
         }}
       >
-        <div style={{ fontSize: 28, letterSpacing: 8, textTransform: "uppercase", color: "#c4a46a" }}>
-          2026
-        </div>
-        <div style={{ fontSize: 92, fontStyle: "italic", marginTop: 16 }}>
+        <div style={{ fontSize: 24, letterSpacing: 10, textTransform: "uppercase" }}>2026</div>
+        <div style={{ fontSize: 84, marginTop: 16, letterSpacing: 6, textTransform: "uppercase" }}>
           Ballon Don&apos;t
         </div>
-        <div style={{ fontSize: 32, marginTop: 24, color: "#c9c0b2" }}>
+        <div style={{ fontSize: 28, marginTop: 24, color: "#F5F1DC" }}>
           The least prestigious award in football
         </div>
       </div>

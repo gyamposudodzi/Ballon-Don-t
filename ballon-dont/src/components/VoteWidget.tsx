@@ -73,8 +73,8 @@ export function VoteWidget({ nominees }: VoteWidgetProps) {
                 onClick={() => toggle(nominee.slug)}
                 className={`border px-4 py-4 text-left transition ${
                   active
-                    ? "border-rust bg-ink-800"
-                    : "border-line bg-ink-900/50 hover:border-bronze/60"
+                    ? "border-[#FCD4A0] bg-[#223A49]"
+                    : "border-[#FCD4A0]/40 bg-[#050C13] hover:border-[#FCD4A0]"
                 }`}
               >
                 <p className="text-[10px] tracking-[0.16em] uppercase text-bronze-light">
