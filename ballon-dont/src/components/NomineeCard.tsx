@@ -24,11 +24,11 @@ export function NomineeCard({ nominee }: NomineeCardProps) {
 
       <div className="relative mx-auto mt-2 flex h-[168px] w-[168px] items-center justify-center sm:h-[180px] sm:w-[180px]">
         <span className="block h-full w-full overflow-hidden rounded-full bg-[#223A49]">
-          {nominee.image ? (
+          {nominee.portrait || nominee.image ? (
             <img
-              src={nominee.image}
+              src={nominee.portrait ?? nominee.image}
               alt=""
-              className="h-full w-full object-cover object-[center_12%]"
+              className="h-full w-full object-cover object-center"
             />
           ) : (
             <span className="flex h-full w-full items-center justify-center text-3xl text-[#FCD4A0]">

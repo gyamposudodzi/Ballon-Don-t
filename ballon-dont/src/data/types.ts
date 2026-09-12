@@ -20,6 +20,7 @@ export type Nominee = {
   age?: string;
   nominations?: number;
   image?: string;
+  portrait?: string;
   categories: AwardCategory[];
   charge: string;
   roast: string;

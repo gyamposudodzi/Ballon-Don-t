@@ -13,6 +13,7 @@ type Draft = {
   age?: string;
   nominations?: number;
   image?: string;
+  portrait?: string;
   categories: AwardCategory[];
   charge: string;
   roast: string;
@@ -41,7 +42,8 @@ function card(draft: Draft): Nominee {
     position: draft.position,
     age: draft.age,
     nominations: draft.nominations ?? 1,
-    image: draft.image,
+    image: draft.image ?? `/portraits/${draft.slug}.jpg`,
+    portrait: draft.portrait ?? `/portraits/${draft.slug}.jpg`,
     categories: draft.categories,
     charge: draft.charge,
     roast: draft.roast,
